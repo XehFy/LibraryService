@@ -34,7 +34,7 @@ using namespace View;
 				cin >> login;
 				cout << "Enter your password: ";
 				cin >> password;
-				//проверка на существование пользователя
+				//ГЇГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г±ГіГ№ГҐГ±ГІГўГ®ГўГ Г­ГЁГҐ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї
 				Model::User tmp = userController.FindUser(login, password);
 				if (tmp.Login!="") {
 					UserPersonalAccountMenu(tmp);
@@ -57,10 +57,8 @@ using namespace View;
 				cout << "Enter your password: ";
 				cin >> password;
 				Model::User tmp = userController.AddUser(name, login, password);
-				//попытка добавления нового пользователя, вход при успехе
-				if (true) {
-					UserPersonalAccountMenu(tmp);
-				}
+				//ГЇГ®ГЇГ»ГІГЄГ  Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГї Г­Г®ГўГ®ГЈГ® ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї, ГўГµГ®Г¤ ГЇГ°ГЁ ГіГ±ГЇГҐГµГҐ
+				UserPersonalAccountMenu(tmp);
 			}
 		}
 	void UserUI::UserPersonalAccountMenu(Model::User user) {
@@ -170,7 +168,7 @@ using namespace View;
 				cin >> login;
 				cout << "Enter your password: ";
 				cin >> password;
-				//проверка на существование администратора
+				//ГЇГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г±ГіГ№ГҐГ±ГІГўГ®ГўГ Г­ГЁГҐ Г Г¤Г¬ГЁГ­ГЁГ±ГІГ°Г ГІГ®Г°Г 
 				Model::Admin tmp = adminController.FindAdmin(login, password);
 				if (tmp.Login != "") {
 					AdminPersonalAccountMenu(tmp);
@@ -196,7 +194,7 @@ using namespace View;
 				cout << "Enter your passport number: ";
 				cin >> passportNum;
 				Model::Admin tmp = adminController.AddAdmin(name, login, password, passportNum);
-				//попытка добавления нового пользователя, вход при успехе
+				//ГЇГ®ГЇГ»ГІГЄГ  Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГї Г­Г®ГўГ®ГЈГ® ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї, ГўГµГ®Г¤ ГЇГ°ГЁ ГіГ±ГЇГҐГµГҐ
 				if (true) {
 					AdminPersonalAccountMenu(tmp);
 				}
